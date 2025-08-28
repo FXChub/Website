@@ -1,0 +1,20 @@
+body {
+    background-color: #92b4ff;
+}
+h1 {
+    color: black;
+}
+ul {
+    list-style-type: square;
+}
+img {
+    width: 200px;  
+    margin: 10px;
+}
+a { 
+    color: yellow;
+    text-decoration: none;  
+}
+a:hover {
+    text-decoration: underline;
+}
