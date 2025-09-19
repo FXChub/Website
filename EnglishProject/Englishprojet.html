@@ -2,13 +2,18 @@
 <html>
 <head>
     <title>A little guide to California</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../CSS/projet.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Welcome to your guide to the Golden State!</h1>
-    <p>Enjoy videos explaining some history, where to visit, places to eat, facts about the state and more from this page and its selection of themed sites.</p>
-
+  <div class="header-menu">
+    <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+    <div class="menu-links" id="menuLinks">
+        <a href="../index.html" class="header-btn">Home</a>
+        <a href="Landmarks.html" class="header-btn">Landmarks</a>
+        <!-- Add more links as needed -->
+    </div>
+</div>
     <h2>Quick facts</h2>
 
         <li>California is the most populous state in the USA. It has aroud 39 million inhabitants according to a 2024 estimate. It beats Texas with its 30 million and Florida with 22 million and is therefore the most populated state in the USA.</li>
@@ -16,7 +21,7 @@
         <li>California had many famous things that when heard or mentioned makes you think about the state. It could be cities such as Los Angeles and San Francisco. Locations such as the Golden Gate Bridge, Hollywood and Disneyland, beautiful sceneri like Yosemite nathional park, Santa Monica beach and part of Death Valley.</li>
         <li>With California being the most populous state in the USA, it makes sense that it has the largest economy. The state of California actually has the largest GSP in the entire country with it being around 4.172 trillion USD or 102 500 per capita. We can compare this to a country like the UK with California having a GSP 1.5 times larger than the entirety of the UK.</li>
         <li>California has alot of places too see and with that there will be landmarks that every tourist would want to visit. Some of Californias most famous landmarks are located within the larger cities with places like Santa Monica Pier and the Hollywood Sign in LA, and The Golden Gate Bridge and San Francisco cable cars in San Francisco. there always landmarks to discover.</li>
-        <li>When talking about media, entertainment and technology, California is the ultimate hub for just that. When it comes to media, one of the oldest radio stations still around is located in the San Fransico Bay was founded in 1909 ans is called KCBS (AM). On the entertainment side alot of big movie studios have their offices in Hollywood. The "Big 5" of the movie industry being Columbia, Disney, Paramount, Universal and Warner Bros are all based in LA. Alot of smaller studios such as Blumhouse and animation studios like Dreamworks and Illumination are also located here. Technology and California has always been pretty interconnected. That is due to Silicon Valley being the hub for many of the worlds largest tech companies. Three of "The Big 5" within tech being Apple, Meta and Google are all based here. Other companies like Netflix, Youtube, Microsoft, Amazon and Yahoo! are also based here.|</li>
+        <li>When talking about media, entertainment and technology, California is the ultimate hub for just that. When it comes to media, one of the oldest radio stations still around is located in the San Fransico Bay was founded in 1909 ans is called KCBS (AM). On the entertainment side alot of big movie studios have their offices in Hollywood. The "Big 5" of the movie industry being Columbia, Disney, Paramount, Universal and Warner Bros are all based in LA. Alot of smaller studios such as Blumhouse and animation studios like Dreamworks and Illumination are also located here. Technology and California has always been pretty interconnected. That is due to Silicon Valley being the hub for many of the worlds largest tech companies. Three of "The Big 5" within tech being Apple, Meta and Google are all based here. Other companies like Netflix, Youtube, Microsoft, Amazon and Yahoo! are also based here.</li>
         <li>In short California has something for everyone, whether you're interested in nature, culture, or technology, and for those who are especially interested. Take a trip to San Diego and check out Comic Con if its that time of year.</li>
 
     <h2>Photos</h2>
@@ -39,7 +44,15 @@
 
     <h2>Links</h2>
     <ul>
-        <li><a href="https://www.example.com">Visit Example.com</a></li>
+        <li><a href="../index.html">Back to Home</a></li>
+         <li><a href="Landmarks.html">Landmarks</a></li>
     </ul>
+
+    <script>
+function toggleMenu() {
+    const menu = document.getElementById('menuLinks');
+    menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+}
+</script>
 </body>
 </html>

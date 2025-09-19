@@ -1,0 +1,15 @@
+.media-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.media-grid img, .media-grid video {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+.media-grid h3 {
+    margin-top: 0;
+}
