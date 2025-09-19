@@ -1,109 +1,116 @@
-body {
-    background-color: #181818; /* or use #000 for pure black */
-    color: #e0e0e0;            /* optional: light text for contrast */
-    font-family: 'Roboto', Arial, sans-serif;
-}
 .header-flex {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
 }
 
+/* Photo */
 .top-left-photo {
-    width: 120px;      /* Larger on desktop */
-    height: auto;
-    border-radius: 8px;
-    margin-right: 20px;
-    position: static;
+  width: 80px;
+  height: auto;
+  flex-shrink: 0; /* Prevent photo from shrinking */
 }
 
+/* Headline */
 .header-text {
-    color: limegreen;
+  flex: 1 1 auto; /* Grow and shrink as needed, take up available space */
+  text-align: center;
+  margin: 0 20px;
 }
 
-@media (max-width: 600px) {
-    .header-flex {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .top-left-photo {
-        width: 60px;   /* Smaller on mobile */
-        margin-bottom: 15px;
-        margin-right: 0;
-    }
-}
-.header-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-left: 30px;
-    margin-top: 10px;
-}
-
-.header-btn {
-    background-color: #222;
-    color: #e0e0e0;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-    transition: background 0.2s, color 0.2s;
-    cursor: pointer;
-    text-align: center;
-}
-
-.header-btn:hover {
-    background-color: limegreen;
-    color: #181818;
-}
+/* Menu */
 .header-menu {
-    position: relative;
-    margin-left: 30px;
-    margin-top: 10px;
-}
-
-.menu-toggle {
-    background: #222;
-    color: #e0e0e0;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 6px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background 0.2s, color 0.2s;
-}
-
-.menu-toggle:hover {
-    background: limegreen;
-    color: #181818;
+  flex: 0 0 auto; /* Do not grow or shrink, size based on content */
 }
 
 .menu-links {
-    display: none;
+  display: flex; /* links side by side on desktop */
+  gap: 15px;
+}
+
+.menu-toggle {
+  display: none; /* hide menu button on desktop */
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* --- Mobile --- */
+@media (max-width: 768px) {
+  .header-flex {
     flex-direction: column;
-    gap: 10px;
-    position: absolute;
-    top: 45px;
-    left: 0;
-    background: #222;
-    padding: 10px;
-    border-radius: 8px;
-    z-index: 100;
+    align-items: center;
+  }
+
+  .header-text {
+    margin: 10px 0;
+  }
+
+  .menu-links {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .menu-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block; /* show button on mobile */
+  }
+
+  .header-menu {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-.menu-links a {
-    color: #e0e0e0;
-    text-decoration: none;
-    padding: 8px 0;
-    font-weight: bold;
-    border-radius: 4px;
-    transition: background 0.2s, color 0.2s;
+/* --- Dropdown Menu --- */
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-.menu-links a:hover {
-    background: limegreen;
-    color: #181818;
+.dropdown-content {
+  display: none; /* Hidden by default */
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  right: 0; /* Align dropdown to the right of the button */
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block; /* Make links fill the container */
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* This class is added by JavaScript to show the dropdown */
+.dropdown-content.active {
+  display: block;
+}
+
+.header-btn {
+  background-color: #007BFF;
+  color: white;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.header-btn:hover {
+  background-color: #0056b3;
 }

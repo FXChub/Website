@@ -1,12 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landmarks</title>
-    <link rel="stylesheet" href="landmark.css">
+    <link rel="stylesheet" href="../CSS/projet.css">
+    <link rel="stylesheet" href="../CSS/landmark.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Landmarks</h1>
+    <header class="header-flex">
+      <!-- Left: Photo -->
+      <img class="top-left-photo" src="../Bilder/Cali.webp" alt="California State Flag">
+    
+      <!-- Middle: Headline -->
+      <h1 class="header-text">Landmarks</h1>
+    
+      <!-- Right: Menu -->
+      <div class="header-menu dropdown">
+        <button class="header-btn" onclick="toggleMenu()">Menu</button>
+        <nav class="dropdown-content" id="menuLinks">
+          <a href="Englishprojet.html">Home</a>
+          <a href="aboutcali.html">About California</a>
+          <a href="culture.html">Culture</a>
+          <a href="history.html">History</a>
+          <a href="tech.html">Technology</a>
+          <a href="attractions.html">Attractions</a>
+        </nav>
+      </div>
+    </header>
+
     <p>Discover more about California’s culture, attractions, and history on this page.</p>
 
     <h2>Quick Facts</h2>
@@ -33,9 +56,10 @@
     </div>
 </div>
 
-    <h2>Links</h2>
-    <ul>
-        <li><a href="Englishprojet.html">Home</a></li>
-    </ul>
+    <script>
+    function toggleMenu() {
+      document.getElementById("menuLinks").classList.toggle("active");
+    }
+    </script>
 </body>
 </html>
