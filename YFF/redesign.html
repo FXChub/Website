@@ -4,51 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern Layout</title>
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden; /* Hide scrollbars on the main page */
-            font-family: sans-serif;
-        }
-
-        .main-container {
-            display: flex;
-            flex-direction: column;
-            height: 100vh; /* Full viewport height */
-        }
-
-        #topp {
-            height: 120px;
-            width: 100%;
-            border: none;
-        }
-
-        .content-container {
-            display: flex;
-            flex-grow: 1; /* Takes up remaining space */
-        }
-
-        #meny {
-            width: 145px;
-            height: 100%;
-            border: none;
-        }
-
-        #hoved {
-            flex-grow: 1; /* Takes up remaining space */
-            height: 100%;
-            border: none;
-        }
-    </style>
+    <link rel="stylesheet" href="../CSS/redesign.css"> 
 </head>
 <body>
     <div class="main-container">
-        <iframe name="topp" src="sider/topp.html" id="topp"></iframe>
+        <iframe name="topp" src="sidetopp.html" id="topp"></iframe>
         <div class="content-container">
             <iframe name="meny" src="sider/meny.html" id="meny"></iframe>
-            <iframe name="hoved" src="sider/hoved.html" id="hoved"></iframe>
+            <iframe name="hoved" src="sidehoved.html" id="hoved"></iframe>
         </div>
     </div>
 </body>
