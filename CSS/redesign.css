@@ -1,0 +1,36 @@
+ html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Hide scrollbars on the main page */
+            font-family: sans-serif;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh; /* Full viewport height */
+        }
+
+        #topp {
+            height: 120px;
+            width: 100%;
+            border: none;
+        }
+
+        .content-container {
+            display: flex;
+            flex-grow: 1; /* Takes up remaining space */
+        }
+
+        #meny {
+            width: 145px;
+            height: 100%;
+            border: none;
+        }
+
+        #hoved {
+            flex-grow: 1; /* Takes up remaining space */
+            height: 100%;
+            border: none;
+        }
