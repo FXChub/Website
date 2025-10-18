@@ -115,19 +115,16 @@ footer {
   }
 }
 
-.arch { transform: translateY(250px); }
-.language { transform: translateY(300px); }
-.hiphop { transform: translateY(350px); }
-.divided { transform: translateY(370px); }
-.dream { transform: translateY(410px); }
-.goldrush { transform: translateY(200px); }
-.dayofthedead { transform: translateY(350px); }
-.museum { transform: translateY(400px); }
-.caliregions { transform: translateY(440px); }
-.landscape { transform: translateY(380px); }
+.map { transform: translateY(150px); }
+.google { transform: translateY(300px); }
+.valley { transform: translateY(550px); }
+
+.aerial { transform: translateY(170px); }
+.silicon { transform: translateY(410px); }
+.icon { transform: translateY(400px); }
 
 
 /* optional: smooth transitions while tweaking */
-.arch, .language, .hiphop, .divided, .dream, .goldrush, .dayofthedead, .museum, .caliregions, .landscape {
+.map, .google, .valley, .aerial, .silicon, .icon {
   transition: transform 0.2s ease;
 }

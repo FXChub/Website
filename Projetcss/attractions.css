@@ -115,21 +115,23 @@ footer {
   }
 }
 
-.arch { transform: translateY(250px); }
-.language { transform: translateY(300px); }
-.hiphop { transform: translateY(350px); }
-.divided { transform: translateY(370px); }
-.dream { transform: translateY(410px); }
+.disneyland{ transform: translateY(150px); }
+.zooposter { transform: translateY(400px); }
+.yosemite { transform: translateY(550px); }
+.comic { transform: translateY(800px); }
+.silicon { transform: translateY(960px); }
+.piersunset { transform: translateY(1100px); }
+.silicon { transform: translateY(960px); }
 
-
-.goldrush { transform: translateY(200px); }
-.dayofthedead { transform: translateY(350px); }
-.museum { transform: translateY(400px); }
-.caliregions { transform: translateY(440px); }
-.landscape { transform: translateY(380px); }
+.castle { transform: translateY(200px); }
+.rhino { transform: translateY(350px); }
+.yosemitemap { transform: translateY(600px); }
+.building { transform: translateY(800px); }
+.valley { transform: translateY(970px); }
+.pier { transform: translateY(1050px); }
 
 
 /* optional: smooth transitions while tweaking */
-.arch, .language, .hiphop, .divided, .dream, .goldrush, .dayofthedead, .museum, .caliregions, .landscape {
+.disneyland, .zooposter, .yosemite, .comic, .silicon, .piersunset, .castle, .rhino, .yosemitemap, .comicbuilding, .valley, .pier {
   transition: transform 0.2s ease;
 }
