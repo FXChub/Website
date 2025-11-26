@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random Quote Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background: #f4f4f4;
+    }
+    #quote-box {
+      font-size: 20px;
+      margin: 20px;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background: #007BFF;
+      color: white;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Random Quote Generator</h1>
+  <div id="quote-box">Click the button to get a quote!</div>
+  <button onclick="newQuote()">Get Quote</button>
+
+  <script>
+    const quotes = [
+      "You too can be a hero- All Might",
+      "If you wanna stop this, then stand up. Because I’ve got one thing to say to you. Never forget who you want to become- Shoto Todoroki",
+      "You can’t sit around and wait for someone else to do it. You have to take action yourself- Izuku Midoriya",
+      "Should we have let people die, all in the name of the law? Isn’t it a hero’s job to save people?- Shoto Todoroki",
+      "Heroes and villains both thrive on violence, but we’re still categorized. “You’re good” “You’re evil”. That’s how it is! Symbol of peace? Hah! In the end you’re just a tool for violence, made to keep us down. And violence only breeds more violence- Tomura Shigaraki",
+      "I would rather be a brainless monkey than a heartless monster– Goku",
+      "I am looking at things from a much higher perspective than you. I observe this world, this universe, the truth of all things. And I have realized that mortals must be destroyed. Out of all which the gods have made, mortals are their sole failure. In order to make this world, this universe, into a beautiful utopia, I must remove humanity, in place of the gods who refuse to admit their mistake- Goku Black",
+      "Power comes in response to a need, not a desire. You have to create that need- Goku",
+      "I am the hope of the Universe…I am the answer to all living things that cry out for peace…I am the protector of the innocent…I am the light in the darkness…I am the truth. Ally to good…Nightmare to you!- Goku",
+      "Even a low-class warrior can surpass an elite. With enough hard work- Goku",
+      "Meaningless huh? What do you know of meaningless? Spend most of your life ruled be another, watch your race dwindle to a handfull, and then. Tell me what has more meaning than your own strength. I have in me the blood of a saiyan prince. He is nothing, but a joke. Yet ive had to watch you surpass me in strength, my destiny thrown to the wayside- Majin Vegeta",
+      "Is that supposed to be insulting? You say im arrogant i say damn right. Thats pride. Pride in the saiyan i am. The mighty prince of the ultimate warrior race. Impossible to defeat you? Dont make me laugh. I wont surrender control, thats not the man i am. Let Kakarot use his thoughtless Ultra Instinct all he wants, but im the one whos gonna crush you Jiren, and im gonna do it my way. You claim im no threat to you, i assume that means you wont act like a coward and try to avoid this blast- Vegeta",
+      "Nah, i'd win- Saturo Gojo",
+      "Throughout heaven and earth, I alone am the honored one- Saturo Gojo",
+      "Finding more fallen out hair on your pillow, watching your favorite stuffed bread disappear from convenience stores... The accumulation of those little despairs is what makes a person an adult- Kento Nanami",
+      "Its ironic, isnt it? When granted everything, you cant do anything- Satoru Gojo",
+      "I dont want to regret anything because of the way i lived- Yuji Itadori",
+      "Tonights the night- Dexter Morgan",
+      "May the force be with you- Various (Star Wars)",
+      "No, I am your father- Darth Vader",
+      "Do or do not, there is no try- Yoda",
+      "Help me, Obi-Wan Kenobi. You're my only hope- Princess Leia",
+      "Its a trap!- Admiral Ackbar",
+      "Avengers Assemble!- Various (Marvel)",
+      "On your left- Steve Rogers",
+      "With great power comes great responsibility- Uncle Ben",
+      "We are Groot- Groot",
+      "I am inevitable- Thanos",
+      "Im Batman- Bruce Wayne",
+      "You either die a hero, or you live long enough to see yourself become the villain- Harvey Dent",
+      "In brightest day, in blackest night, no evil shall escape my sight. Let those who worship evil's might beware my power... Green Lantern's light!- Hal Jordan",
+
+
+
+    
+    ];
+
+  let shuffled = [];
+      let current = 0;
+
+      function shuffleQuotes() {
+        shuffled = quotes.slice();
+        for (let i = shuffled.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+        current = 0;
+      }
+
+      function newQuote() {
+        if (shuffled.length === 0 || current >= shuffled.length) {
+          shuffleQuotes();
+        }
+        document.getElementById("quote-box").innerText = shuffled[current];
+        current++;
+      }
+
+      // Initialize on page load
+      shuffleQuotes();
+    </script>
+    <h2>Links</h2>
+    <a href="../index.html">Home</a>
+
+      <footer>
+    <p>&copy; 2025 FXC Edition</p>
+  </footer>
+</body>
+
+</html>
