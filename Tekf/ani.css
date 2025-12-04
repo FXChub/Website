@@ -1,0 +1,40 @@
+@keyframes opp-og-ned { 
+
+        0% { 
+
+            top: 0px; 
+
+            background-color: blue; 
+
+        } 
+
+        100% { 
+
+            top: 100px;           /* beveger seg nedover */ 
+
+            background-color: red; /* endrer farge */ 
+
+        } 
+
+    } 
+    @keyframes opp-og-ned { 
+
+        0% { 
+
+            top: 0px; 
+
+            background-color: blue; 
+
+        } 
+
+        100% { 
+
+            top: 100px;           /* beveger seg nedover */ 
+
+            background-color: red; /* endrer farge */ 
+
+            width: 100px; 
+
+        } 
+
+    } 

@@ -245,9 +245,9 @@ const skylanders = [
   // Trap Team (2014) - Trap Masters + Cores + Minis
   { name: "Snap Shot", image : "photos/Trap Team/SnapShot.webp", element: "Water", game: "Trap Team", type: "Trap Master" },
   { name: "Dark Snap Shot", image : "photos/Trap Team/DarkSnapShot.webp", element: "Water", game: "Trap Team", type: "Dark" },
+  { name: "Merry Snap Shot", image : "photos/Lost Islands/MerrySnapShot.webp", element: "Water", game: "Lost Islands", type: "Special Edition" },
   { name: "Lob-Star", image : "photos/Trap Team/LobStar.webp", element: "Water", game: "Trap Team", type: "Trap Master" },
   { name: "Winterfest Lob-Star", image : "photos/Trap Team/WinterfestLobStar.webp", element: "Water", game: "Trap Team", type: "Special Edition" },
-  { name: "Merry Snap Shot", image : "photos/Lost Islands/MerrySnapShot.webp", element: "Water", game: "Lost Islands", type: "Special Edition" },
   { name: "Wallop", image : "photos/Trap Team/Wallop.webp", element: "Earth", game: "Trap Team", type: "Trap Master" },
   { name: "Head Rush", image : "photos/Trap Team/HeadRush.webp", element: "Earth", game: "Trap Team", type: "Trap Master" },
   { name: "Nitro Head Rush", image : "photos/Trap Team/NitroHeadRush.webp", element: "Earth", game: "Trap Team", type: "Nitro" },
