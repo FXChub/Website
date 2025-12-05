@@ -1,0 +1,22 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+#textbox {
+  width: 400px;
+  height: 200px;
+  border: 2px solid #333;
+  padding: 10px;
+  white-space: pre-line;
+  overflow-y: auto;
+  background: #f8f8f8;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 15px;
+}
+button:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
