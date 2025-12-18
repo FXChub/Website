@@ -1,8 +1,8 @@
 /* styles.css */
 body {
   font-family: Arial, sans-serif;
-  background-color: #555555;
-  color: #ffdbdb;
+  background-color: #f4f4f9;
+  color: #333;
   margin: 0;
   padding: 0;
 }
@@ -11,20 +11,21 @@ body {
   max-width: 600px;
   margin: 50px auto;
   padding: 20px;
-  background: #fffcfc;
+  background: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ 
 }
 
 h1 {
   color: #4CAF50;
 }
 
-input[type="number"] {
+inputt {
   padding: 10px;
   margin: 10px 0;
   width: 80%;
-  border: 1px solid #ffffff;
+  border: 1px solid #ccc;
   border-radius: 4px;
 }
 
@@ -44,6 +45,6 @@ button:hover {
 #result {
   margin-top: 20px;
   font-size: 18px;
-  color: #ffffff;
+  color: #555;
 
 }

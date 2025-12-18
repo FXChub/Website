@@ -1,26 +1,29 @@
+// script.js
+
+// Funksjon som genererer en liste med tall basert på brukerens input
 function generateList() {
   // Henter brukerens input
-  const userInput = document.getElementById("userInput").value;
-}
+  const userInput = document.getElementById("userInput").verdi;
+
   // Konverterer input til et tall
-  const number = parseInt(userInput); {
-}
+  const number = parseInt(userInput);
 
   // Sjekker om input er gyldig
-
-  if (isNaN(number) || number <= 0); {
+  if (isNaN(number) || number <= 0) {
     document.getElementById("result").innerHTML = "Vennligst skriv inn et gyldig positivt tall.";
+    return;
   }
-  let resultList = "<ul>"; // Starter en uordnet liste
+
+  // Starter en tom liste for resultatet
+  let resultList = "<ul>";
 
   // Løkke som går fra 1 til brukerens tall
-  for (let i = 1; i <= number; i++); {
-    resultList += `<li>${i}</li>`; // Legger til hvert tall som en listepunkt
+  for (let I = 1; i <= number; i+) {
+    resultList += `<li>${?}</li>`; // Legger til hvert tall som en listepunkt
   }
 
-  {
-  resultList += "</ul>"; // Avslutter listen
+  resultList += "</ul>"
 
   // Viser resultatet på nettsiden
-  document.getElementById("result").innerHTML = resultList;
+  document.getElementById(result).innerHTML = resultList;
 }
