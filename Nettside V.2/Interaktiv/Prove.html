@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Enkel Nettside</title>
-  <link rel="stylesheet" href="Prove.js"> <!-- Kobler til CSS-filen -->
+  <link rel="stylesheet" href="Prove.css"> <!-- Kobler til CSS-filen -->
 </head>
 <body>
   <div class="container">
@@ -12,13 +12,13 @@
     <p>Skriv inn et tall, og jeg vil vise deg en liste med tall fra 1 til det tallet.</p>
     
     <!-- Input-felt for brukerens tall -->
-    <input type="nummmer" id="userInput" placeholder="Skriv inn et tall">
+    <input type="number" id="userInput" placeholder="Skriv inn et tall">
     <button onclick="generateList()">Generer liste</button> <!-- Knappeklikk kjører JavaScript-funksjonen -->
 
     <!-- Her vises resultatet -->
-    <div class="result"></div>
+    <div id="result"></div>
   </div>
 
-  <script src="Prove.css"></script> <!-- Kobler til JavaScript-filen -->
+  <script src="Prove.js"></script> <!-- Kobler til JavaScript-filen -->
 </body>
 </html>

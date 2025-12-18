@@ -3,7 +3,7 @@
 // Funksjon som genererer en liste med tall basert på brukerens input
 function generateList() {
   // Henter brukerens input
-  const userInput = document.getElementById("userInput").verdi;
+  const userInput = document.getElementById("userInput").value;
 
   // Konverterer input til et tall
   const number = parseInt(userInput);
@@ -18,12 +18,12 @@ function generateList() {
   let resultList = "<ul>";
 
   // Løkke som går fra 1 til brukerens tall
-  for (let I = 1; i <= number; i+) {
-    resultList += `<li>${?}</li>`; // Legger til hvert tall som en listepunkt
+  for (let i = 1; i <= number; i++) {
+    resultList += `<li>${i}</li>`; // Legger til hvert tall som en listepunkt
   }
 
-  resultList += "</ul>"
+  resultList += "</ul>";
 
   // Viser resultatet på nettsiden
-  document.getElementById(result).innerHTML = resultList;
+  document.getElementById("result").innerHTML = resultList;
 }
