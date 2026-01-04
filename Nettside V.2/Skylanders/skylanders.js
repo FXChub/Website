@@ -1,4 +1,4 @@
-// Skylanders dataset (converted from your TypeScript)
+// Sorterer alle karakterene etter navn, bilde, element, spill og type
 const skylanders = [
   { name: "Spyro", image : "photos/SpyrosAdventure/Spyro.webp", element: "Magic", game: "Spyro's Adventure", type: "Core"},
   { name: "Eon's Elite Spyro", image : "photos/Trap Team/EliteSpyro.webp", element: "Magic", game: "Trap Team", type: "Eon's Elite" },
@@ -108,7 +108,7 @@ const skylanders = [
   { name: "Slam Bam", image : "photos/SpyrosAdventure/SlamBam.webp", element: "Water", game: "Spyro's Adventure", type: "Core" },
   { name: "Surfer Slam Bam", image : "photos/Lost Islands/SummerSlamBam.webp", element: "Water", game: "Lost Islands", type: "Special Edition" },
   { name: "Slam Bam (Series 2)", image : "photos/Giants/SlamBam2.webp", element: "Water", game: "Giants", type: "Core" },
-  { name: "Legendary Slam Bam (Series 2)", image : "photos/Giants/LegendSlamBam.webp", element: "Water", game: "Legendary", type: "Legendary"},
+  { name: "Legendary Slam Bam (Series 2)", image : "photos/Giants/LegendSlamBam.webp", element: "Water", game: "Giants", type: "Legendary"},
   { name: "Eon's Elite Slam Bam (Series 2)", image : "photos/Superchargers/EliteSlamBam.webp", element: "Water", game: "SuperChargers", type: "Eon's Elite" },
   { name: "Boomer", image : "photos/SpyrosAdventure/Boomer.webp", element: "Tech", game: "Spyro's Adventure", type: "Core" },
   { name: "Lucky Boomer", image : "photos/Lost Islands/LuckyBoomer.webp", element: "Tech", game: "Lost Islands", type: "Special Edition" },
@@ -128,8 +128,6 @@ const skylanders = [
   { name: "Sunburn", image : "photos/SpyrosAdventure/Sunburn.webp", element: "Fire", game: "Spyro's Adventure", type: "Core" },
   { name: "Wham-Shell",image : "photos/SpyrosAdventure/WhamShell.webp", element: "Water", game: "Spyro's Adventure", type: "Core" },
   { name: "Lightcore Wham-Shell", image : "photos/SwapForce/LCWhamShell.webp", element: "Water", game: "Swap Force", type: "Lightcore" },
-
-  // Giants (2012) - 16 New Core + 8 Giants
   { name: "Tree Rex", image : "photos/Giants/TreeRex.webp", element: "Life", game: "Giants", type: "Giant" },
   { name: "Gnarly Tree Rex", image : "photos/Giants/GnarlyTreeRex.webp", element: "Life", game: "Giants", type: "Mini" },
   { name: "Barkley", image : "photos/Giants/Barkley.webp", element: "Life", game: "Giants", type: "Mini" },
@@ -182,8 +180,6 @@ const skylanders = [
   { name: "Hot Dog", image : "photos/Giants/HotDog.webp", element: "Fire", game: "Giants", type: "Core" },
   { name: "Molten Hot Dog", image : "photos/Giants/MoltenHotDog.webp", element: "Fire", game: "Giants", type: "Core" },
   { name: "Fire Bone Hot Dog (Series 2)", image : "photos/SwapForce/HotDog2.webp", element: "Fire", game: "Swap Force", type: "Core" },
-  
-  // Swap Force (2013) - 16 Swap Force + Cores
   { name: "Wash Buckler", image : "photos/SwapForce/WashBuckler.webp", element: "Water", game: "Swap Force", type: "Swap Force" },
   { name: "Dark Wash Buckler", image : "photos/SwapForce/DarkWashBuckler.webp", element: "Water", game: "Swap Force", type: "Dark" },
   { name: "Holiday Wash Buckler", image : "photos/Lost Islands/HolidayWashBuckler.webp", element: "Water", game: "Lost Islands", type: "Special Edition" },
@@ -243,8 +239,6 @@ const skylanders = [
   { name: "Slobber Tooth", image : "photos/SwapForce/SlobberTooth.webp", element: "Earth", game: "Swap Force", type: "Core" },
   { name: "Dark Slobber Tooth", image : "photos/SwapForce/DarkSlobberTooth.webp", element: "Earth", game: "Swap Force", type: "Dark" },
   { name: "Sundae Slobber Tooth", image : "photos/Lost Islands/SundaeSlobberTooth.webp", element: "Earth", game: "Lost Islands", type: "Special Edition" },
-  
-  // Trap Team (2014) - Trap Masters + Cores + Minis
   { name: "Snap Shot", image : "photos/Trap Team/SnapShot.webp", element: "Water", game: "Trap Team", type: "Trap Master" },
   { name: "Dark Snap Shot", image : "photos/Trap Team/DarkSnapShot.webp", element: "Water", game: "Trap Team", type: "Dark" },
   { name: "Instant Snap Shot", image : "photos/Trap Team/InstantSnapShot.webp", element: "Water", game: "Trap Team", type: "Special Edition" },
@@ -300,8 +294,6 @@ const skylanders = [
   { name: "High Five", image : "photos/Trap Team/HighFive.webp", element: "Life", game: "Trap Team", type: "Core" },
   { name: "Deja Vu", image : "photos/Trap Team/Deja Vu.webp", element: "Magic", game: "Trap Team", type: "Core" },
   { name: "Legendary Deja Vu", image : "photos/Trap Team/LegendDejaVu.webp", element: "Magic", game: "Trap Team", type: "Legendary" },
-
-  // SuperChargers (2015) - 20 SuperChargers + Variants
   { name: "Spitfire", image : "photos/SuperChargers/Spitfire.webp", element: "Fire", game: "SuperChargers", type: "SuperCharger" },
   { name: "Dark Spitfire", image : "photos/SuperChargers/DarkSpitfire.webp", element: "Fire", game: "SuperChargers", type: "Dark" },
   { name: "Instant Spitfire", image : "photos/SuperChargers/InstantSpitfire.webp", element: "Fire", game: "SuperChargers", type: "SuperCharger" },
@@ -325,9 +317,6 @@ const skylanders = [
   { name: "Dark Turbo Charge Donkey Kong", image : "photos/SuperChargers/DarkDonkeyKong.webp", element: "Tech", game: "SuperChargers", type: "Dark" },
   { name: "Hammer Slam Bowser", image : "photos/SuperChargers/Bowser.webp", element: "Fire", game: "SuperChargers", type: "SuperCharger" },
   { name: "Dark Hammer Slam Bowser", image : "photos/SuperChargers/DarkBowser.webp", element: "Fire", game: "SuperChargers", type: "Dark" },
-
-
-  // Imaginators (2016) - 31 Senseis + Variants
   { name: "King Pen", image : "photos/Imaginators/KingPen.webp", element: "Water", game: "Imaginators", type: "Sensei" },
   { name: "Dark King Pen", image : "photos/Imaginators/DarkKingPen.webp", element: "Water", game: "Imaginators", type: "Dark" },
   { name: "Golden Queen", image : "photos/Imaginators/GoldenQueen.webp", element: "Earth", game: "Imaginators", type: "Sensei" },
@@ -354,7 +343,7 @@ const skylanders = [
   { name: "Flare Wolf", image : "photos/Imaginators/FlareWolf.webp", element: "Fire", game: "Imaginators", type: "Sensei" },
   { name: "Hard-Boiled Flare Wolf", image : "photos/Imaginators/HardBoiledFlareWolf.webp", element: "Fire", game: "Imaginators", type: "Special Edition" },
   { name: "Pit Boss", image : "photos/Imaginators/PitBoss.webp", element: "Undead", game: "Imaginators", type: "Sensei" },
-  { name: "Legendary Pit Boss", image : "photos/Imaginators/LegendPitBoss.webp", element: "Undead", game: "Legendary", type: "Legendary"},
+  { name: "Legendary Pit Boss", image : "photos/Imaginators/LegendPitBoss.webp", element: "Undead", game: "Imaginators", type: "Legendary"},
   { name: "Tri-Tip", image : "photos/Imaginators/TriTip.webp", element: "Earth", game: "Imaginators", type: "Sensei" },
   { name: "Legendary Tri-Tip", image : "photos/Imaginators/LegendTriTip.webp", element: "Earth", game: "Imaginators", type: "Legendary" },
   { name: "Blaster-Tron", image : "photos/Imaginators/BlasterTron.webp", element: "Light", game: "Imaginators", type: "Sensei" },
@@ -380,20 +369,19 @@ const skylanders = [
   { name: "Crash Bandicoot", image : "photos/Imaginators/CrashBandicoot.webp", element: "Life", game: "Imaginators", type: "Sensei" },
   { name: "Dr. Neo Cortex", image : "photos/Imaginators/DrNeoCortex.webp", element: "Tech", game: "Imaginators", type: "Sensei" },
   { name: "Boom Bloom", image : "photos/Imaginators/BoomBloom.webp", element: "Life", game: "Imaginators", type: "Sensei" },
-  
-  // Additional Missing Characters
   { name: "Chompy Mage", image : "photos/Imaginators/ChompyMage.webp", element: "Life", game: "Imaginators", type: "Sensei" },
   { name: "Jingle Bell Chompy Mage", image : "photos/Imaginators/JingleBellChompyMage.webp", element: "Life", game: "Imaginators", type: "Special Edition" },
   { name: "Chompy Mage (Villain)", image : "photos/Giants/ChompyMageVillain.webp", element: "Life", game: "Giants", type: "Villain" },
 ];
 
+// Henter informasjon fra HTML
 const listEl = document.getElementById("skylander-list");
 const searchEl = document.getElementById("search");
 const filterElement = document.getElementById("filter-element");
 const filterGame = document.getElementById("filter-game");
 const filterType = document.getElementById("filter-type");
 
-// Populate filter dropdowns dynamically
+//Filtrere dropdowns
 function populateFilters() {
   const elements = new Set();
   const games = new Set();
@@ -418,7 +406,7 @@ function populateFilters() {
 
 populateFilters();
 
-// Render list
+// Lager listen
 function render() {
   const search = searchEl.value.toLowerCase();
   const selectedElement = filterElement.value;
@@ -434,6 +422,7 @@ function render() {
     );
   });
 
+  // Hvordan oppsett av hver Skylander skal se ut
 listEl.innerHTML = filtered
   .map(
     s => `

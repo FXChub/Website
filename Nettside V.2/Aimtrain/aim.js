@@ -1,3 +1,4 @@
+// Deler inn elementer fra filen og definerer variabler som den trekker informasjon fra
 const gameArea = document.getElementById('gameArea');
 const target = document.getElementById('target');
 const startBtn = document.getElementById('startBtn');
@@ -6,17 +7,18 @@ const missesEl = document.getElementById('misses');
 const levelEl = document.getElementById('level');
 const endBtn = document.getElementById('endBtn');
 
-
+// Tall somm senere går opp under spillet
 let score = 0;
 let misses = 0;
 let level = 1;
 
-// difficulty settings
-let targetSize = 60;          // starting size in px
-let visibleTime = 1200;       // ms the target stays before counting as miss
+// Vannskelighets innstillinger
+let targetSize = 60;          
+let visibleTime = 1200;       
 let timerId = null;
 let gameRunning = false;
 
+// Setter blinken på en tilfeldig posisjon innenfor spillområdet
 function randomPosition(size) {
   const areaRect = gameArea.getBoundingClientRect();
   const maxX = areaRect.width - size;
@@ -26,6 +28,7 @@ function randomPosition(size) {
   return { x, y };
 }
 
+// Oppdaterer poeng, bom og nivå på skjermen
 function updateUI() {
   scoreEl.textContent = score;
   missesEl.textContent = misses;
@@ -33,7 +36,7 @@ function updateUI() {
 }
 
 function moveTarget() {
-  // adjust size and difficulty based on score / level
+  // Forandrer størrelse på blinken etter vanskelighetsgrad
   target.style.width = targetSize + 'px';
   target.style.height = targetSize + 'px';
 
@@ -42,10 +45,10 @@ function moveTarget() {
   target.style.top = pos.y + 'px';
   target.style.display = 'block';
 
-  // clear old timer and start a new one
+  // Starter en ny timer
   if (timerId) clearTimeout(timerId);
   timerId = setTimeout(() => {
-    // if not clicked in time -> miss
+    // Hvis tiden går ut uten klikk, teller det som en bom
     misses++;
     updateUI();
     if (gameRunning) moveTarget();
@@ -54,36 +57,36 @@ function moveTarget() {
 
 function increaseDifficulty() {
   level++;
-  // make target smaller, but not less than 20px
+  // Gjør blinken mindre, men aldri under 20 px
   targetSize = Math.max(20, targetSize - 4);
-  // make it disappear faster, but not less than 400ms
+  // Blinken forsvinner, men aldri under 400 ms
   visibleTime = Math.max(400, visibleTime - 70);
 }
 
 target.addEventListener('click', (e) => {
-  e.stopPropagation(); // prevent counting as click on gameArea
+  e.stopPropagation(); // Registrerer bare treff på blinken
   if (!gameRunning) return;
 
   score++;
   updateUI();
 
-  // every 5 hits -> more difficult
+  // Etter hvert 5. poeng, øk vanskelighetsgraden
   if (score % 5 === 0) {
     increaseDifficulty();
   }
-
+// Flytter blinken til en ny posisjon
   moveTarget();
 });
 
 gameArea.addEventListener('click', () => {
-  // miss if player clicks empty area while game is running
+  // Bom utenfor blinken
   if (!gameRunning) return;
   misses++;
   updateUI();
 });
 
 startBtn.addEventListener('click', () => {
-  // reset stats and difficulty
+  // Restarter all statistikk og starter spillet
     score = 0;
     misses = 0;
     level = 1;
@@ -92,12 +95,12 @@ startBtn.addEventListener('click', () => {
     updateUI();
 
 endBtn.addEventListener('click', () => {
-  gameRunning = false;          // stop game logic
-  clearTimeout(timerId);        // stop pending moveTarget timeout
-  target.style.display = 'none';// hide target
-});
+  gameRunning = false;          // Stop koden
+  clearTimeout(timerId);
+  target.style.display = 'none';// Gjem blinken
 
 
   gameRunning = true;
   moveTarget();
 });
+)
