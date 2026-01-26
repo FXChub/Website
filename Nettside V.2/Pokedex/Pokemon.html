@@ -2,33 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title> Skylanders List</title>
+  <title> Pokedex</title>
   <!-- Linker til CSS-->
-  <link rel="stylesheet" href="skylanders.css">
+  <link rel="stylesheet" href="Pokemon.css">
 </head>
 <body>
 
-  <h1> Skylanders Directory</h1>
+  <h1> The Pokedex</h1>
 
   <!-- Legger opp til filtre på toppen av siden-->
   <div class="controls">
-    <input type="text" id="search" placeholder="Search Skylanders...">
+    <input type="text" id="search" placeholder="Search Pokemon...">
     <select id="filter-element">
       <option value="">All Elements</option>
     </select>
     <select id="filter-game">
       <option value="">All Games</option>
     </select>
-    <select id="filter-type">
-      <option value="">All Types</option>
+    <select id="filter-weight">
+      <option value="">All Weights</option>
     </select>
+    <select id="filter-height">
+      <option value="">All Heights</option>
   </div>
 
   <!-- Setter opp layout til hvordan alle er plassert-->
-  <div id="skylander-list" class="grid"></div>
+  <div id="pokemon-list" class="grid"></div>
 
   <!-- Linker til JavaScript -->
-  <script src="skylanders.js"></script>
+  <script src="Pokemon.js"></script>
   <!-- Link til hovedsiden -->
   <a href="../V.2hub.html">Main Page</a>
 <footer>
